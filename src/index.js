@@ -2,26 +2,37 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Company from './pages/Company';
 import Downloads from './pages/Downloads';
 import Contact from './pages/Contact';
+
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
+      <header className="App-header">
+        <nav>
+          <Link className='App-link' to="/home">Home</Link>
+          <Link className='App-link' to="/company">Company</Link>
+          <Link className='App-link' to="/products">Products</Link>
+          <Link className='App-link' to="/download">Download</Link>
+          <Link className='App-link' to="/contact">Contact</Link>
+        </nav>
+        <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/products" element={<Company />} />
-        <Route path="/products" element={<Downloads />} />
-        <Route path="/products" element={<Contact />} />
+        <Route path="/company" element={<Company />} />
+        <Route path="/download" element={<Downloads />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/*" element={<App />} />
       </Routes>
+      </header>
+      
     </BrowserRouter>
   </React.StrictMode>
 );

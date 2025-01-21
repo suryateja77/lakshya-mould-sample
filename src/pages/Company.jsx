@@ -1,4 +1,4 @@
-import pageImage from '../images/pageImage.png';
+import pageImage from '../images/company.png';
 import '../App.css';
 
 function Company() {

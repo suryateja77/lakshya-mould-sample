@@ -1,4 +1,4 @@
-import pageImage from '../images/pageImage.png';
+import pageImage from '../images/download.png';
 import '../App.css';
 
 function Downloads() {
